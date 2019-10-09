@@ -1,0 +1,272 @@
+@import "colors";
+@import "spacing";
+$tablet: "screen and (min-width: 768px)";
+$pc: "screen and (min-width: 1200px)";
+
+
+body{
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+          "header"
+          "main"
+          "footer";
+  height: 100vh;
+  width: 100%;
+  header{
+    grid-area: header;
+    background-color: darkgray;
+    display: flex;
+    .navbtn{
+      font-size: $maintext;
+      margin: $auto 0 $auto 5%;
+    }
+    h1{
+      font-size: larger;
+      margin-left: $auto;
+      margin-right: 10px;
+    }
+  }
+
+  aside, #navmenu{
+    grid-area: side;
+    background-color: $primary;
+    color: $secondary;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+
+    .fa-home{
+      font-size: xx-large;
+      color: $secondary;
+      margin: 40px auto;
+    }
+    a{
+      margin: 20px 0;
+      text-decoration: none;
+      &:hover .menubtn{
+        background-color: darken($primary, 5);
+        font-weight: bolder;
+        font-size: x-large;
+      }
+    }
+    .menubtn{
+      width: 100%;
+      height: 50px;
+      background-color: darken($primary, 10);
+      color: $secondary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span{
+        font-size: larger;
+        text-decoration: none;
+        color: $secondary;
+        font-weight: bold;
+      }
+    }
+  }
+  #navmenu{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+  main{
+    padding: 0 10px;
+    font-size: $maintext;
+    overflow-y: scroll;
+    section{
+    height: 1000px;
+
+    .statistics{
+      .pageviews{
+        margin-top: 50px;
+
+        .totalviews{
+        width: 200px;
+        margin: 0 auto;
+          background-color: lighten($primary, 20);
+          border: solid $primary 1px;
+          border-radius: 30px;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          flex-wrap: wrap;
+          span:nth-of-type(1){
+            font-size: $smallertext;
+            position: relative;
+            top: -10px;
+            background-color: $primary;
+            color: $secondary;
+            padding: 10px;
+            border-radius: 10px;
+          }
+          span:nth-of-type(2){
+            font-size: $maintext;
+            margin-bottom: 20px;
+            padding: 5px;
+
+          }
+      }
+        .pageviewcontaienr{
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          margin: 10px auto;
+        }
+        span{
+        font-size: $smallertext;
+
+      }
+        .viewsfrom{
+          width: 90%;
+          margin: 20px $auto;
+          background-color: lighten($statscolorbg, 50);
+          div{
+            padding: 10px 10px;
+            display: grid;
+            grid-template-columns: 60% 20% 20%;
+            grid-template-areas: "url month lifetime";
+            justify-content: center;
+            &:nth-child(1){grid-area: url}
+            &:nth-child(2){grid-area: month}
+            &:nth-child(3){grid-area: lifetime}
+            &:nth-of-type(odd){
+              background-color: lighten($statscolorbg, 30);
+            }
+          }
+        }
+        .progressionovertime{
+          width: 50%;
+
+          .bar1total{
+            width: 100%;
+            height: 30px;
+            background-color: $statscolorbg;
+            .bar1amount{
+              width: 60%;
+              height: 28px;
+              position: relative;
+              left: 1px;
+              top: 1px;
+              background-color: $statscolor;
+            }
+          }
+        }
+      }
+    }
+      .users{
+        form{
+          padding: 10px;
+          margin: 0;
+          height: 200px;
+          overflow-y: scroll;
+          div{
+            width: 100%;
+            height: 20px;
+            display: flex;
+            justify-content: space-between;
+            span{
+              padding: 0 10px;
+              font-size: $smallertext;
+            }
+          }
+        }
+
+        #popupinfoB1btn{
+          cursor: pointer;
+        }
+        #popupinfoB1{
+          width: 90%;
+          border: black 2px solid;
+          background-color: lighten($primary, 30);
+          display: flex;
+          display: none;
+          flex-direction: column;
+          position: relative;
+          z-index: 2;
+          top: -50px;
+          left: 50%;
+          transform: translate(-50% 0);
+          div:nth-child(1){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            h4{
+              margin: 20px 40px;
+            }
+            span{
+              margin-left: 40px;
+            }
+          }
+        }
+      }
+
+  }
+
+}
+  .webshop{
+    div{
+         display: flex;
+         flex-direction: column;
+      div{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10%;
+      }
+       }
+    .refundreq{
+      cursor: pointer;
+    }
+    .refundreqDropdown{
+      display: none;
+      background-color: lightgrey;
+      margin: 0 10%;
+      flex-direction: column;
+    }
+  }
+  .highlightinfo {
+    background-color: lightgray;
+    height: 20px;
+    border: darkgrey 1px solid;
+  }
+  footer{
+    grid-area: footer;
+    background-color: gray;
+  }
+}
+
+@media #{$tablet} {
+  body{
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+            "side header"
+            "side main"
+            "side footer";
+    height: 100vh;
+    aside{
+      display: flex;
+    }
+    main{
+      padding: 0 10%;
+    }
+  }
+  header .navbtn{
+    display: none;
+  }
+
+  .webshop{
+    .refundreqDropdown{
+      margin: 0 25%;
+    }
+  }
+}
+
+@media #{$pc} {
+
+}

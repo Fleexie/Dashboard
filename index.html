@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!-- Fortæller det er html5 -->
+<!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
+<html lang="da">
+
+<!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
+<head>
+
+    <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
+    <meta charset="utf-8">
+
+    <!-- Titel som ses oppe i browserens tab mv. -->
+    <title>Sigende titel</title>
+
+    <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
+    <meta name="robots" content="All">
+    <meta name="author" content="Udgiver">
+    <meta name="copyright" content="Information om copyright">
+
+    <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://kit.fontawesome.com/7d513cd01b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<aside>
+    <i class="fas fa-home"></i>
+    <a href="#"><div class="menubtn"><span>Dashboard</span></div></a>
+    <a href="#statistics"><div class="menubtn"><span>Statistics</span></div></a>
+    <a href="#webshop"><div class="menubtn"><span>Webshop</span></div></a>
+    <a href="#"><div class="menubtn"><span>Forum</span></div></a>
+    <a href="#"><div class="menubtn"><span>Contact</span></div></a>
+</aside>
+<div id="navmenu">
+    <a href="#"><div class="menubtn"><span>Dashboard</span></div></a>
+    <a href="#statistics"><div class="menubtn"><span>Statistics</span></div></a>
+    <a href="#webshop"><div class="menubtn"><span>Webshop</span></div></a>
+    <a href="#"><div class="menubtn"><span>Forum</span></div></a>
+    <a href="#"><div class="menubtn"><span>Contact</span></div></a>
+</div>
+
+<header>
+        <div class="navbtn"><i class="fas fa-bars" id="navbtn"></i></div>
+        <h1>Dashboard template</h1>
+</header>
+
+<main>
+
+    <section id="statistics">
+        <div class="statistics">
+            <div class="pageviews">
+                <div class="totalviews"><span><b>Visninger i alt:</b></span> <span class="highlightinfo">199.999.000</span></div>
+                <div class="pageviewcontaienr">
+                    <div><span><b>Visninger på a underside:</b></span> <span class="highlightinfo">570.000</span></div>
+                    <div><span><b>Visninger på b underside:</b></span> <span class="highlightinfo">100.000</span></div>
+                    <div><span><b>Visninger på c underside:</b></span> <span class="highlightinfo">900.000</span></div>
+            </div>
+                    <h2>Top visninger fra URL</h2>
+                <div class="viewsfrom">
+                    <div><span>URL</span><span>Sidste måned</span><span>I alt</span></div>
+                    <div><span>www.example.com/url-asd2</span><span>400</span><span>10.000</span></div>
+                    <div><span>/www.example.com/url-ard3</span><span>300</span><span>1.000</span></div>
+                    <div><span>www.example.com/url-wrd1</span><span>100</span><span>N/A</span></div>
+                </div>
+                <div class="progressionovertime">
+                    <span>Udvikling af visninger:</span>
+                    <div class="bar1total">
+                        <div class="bar1amount">60%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="users">
+                <h2>Brugerstatistik</h2>
+                <span><b>Oprettet brugere:</b></span> <span>500</span>
+                <form>
+                    <div><span>Brugernavn</span><span>Sidst login</span><span>Marker flere</span></div>
+                    <hr>
+                    <div id="popupinfoB1btn"><span>Bruger1</span><span>07/06-2019 09:10</span><span><input type="checkbox"></span></div>
+                    <div><span>Bruger2</span><span>07/06-2019 09:10</span><span><input type="checkbox"></span></div>
+                    <div><span>Bruger3</span><span>07/06-2019 09:10</span><span><input type="checkbox"></span></div>
+                    <div><span>Bruger4</span><span>07/06-2019 09:10</span><span><input type="checkbox"></span></div>
+                    <div><span>Bruger5</span><span>07/06-2019 09:10</span><span><input type="checkbox"></span></div>
+                    <div><span>Bruger6</span><span>07/06-2019 09:10</span><span><input type="checkbox"></span></div>
+                    <div><span>Bruger7</span><span>07/06-2019 09:10</span><span><input type="checkbox"></span></div>
+                    <div><span>Bruger8</span><span>07/06-2019 09:10</span><span><input type="checkbox"></span></div>
+                    <div><span>Bruger9</span><span>07/06-2019 09:10</span><span><input type="checkbox"></span></div>
+                </form>
+                <div id="popupinfoB1">
+                    <div><h4>Bruger1</h4> - <span>#BrugerID</span></div>
+                    <div><span>Oprettelses dato:</span><span>09/03-2018</span></div>
+                    <div><span>Sidste login:</span><span>07/06-2019 09:10</span></div>
+                    <div><span>Antal køb</span><span>10</span></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="webshop" id="webshop">
+        <h2>Webshop</h2>
+        <div>
+            <h4>Dagens statistik</h4>
+            <div><span><b>Antal nye ordrer:</b></span> <span>X</span></div>
+            <div><span><b>Færdigbehandlet ordrer:</b></span> <span>X</span></div>
+            <div><span><b>Annulerede ordrer:</b></span> <span>X</span></div>
+        </div>
+
+        <div>
+            <h4>Månedens statistik</h4>
+            <div><span><b>Antal nye ordrer:</b></span> <span>X</span></div>
+            <div><span><b>Færdigbehandlet ordrer:</b></span> <span>X</span></div>
+            <div><span><b>Annulerede ordrer:</b></span> <span>X</span></div>
+        </div>
+
+        <div>
+            <h4>Refundering</h4>
+            <div class="refundreq" id="refundreq">
+                <span>Ordr. nr - xxxxxx</span><span>Faktura - #0000x</span>
+            </div>
+            <div class="refundreqDropdown" id="refundreqDropdown">
+                <span>Ordr. nr - xxxxxx</span>
+                <span>Faktura - #0000x</span>
+                <span>Produkter:</span>
+                <ul>
+                    <li>i1</li>
+                    <li>i2</li>
+                    <li>i3</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+</html>
